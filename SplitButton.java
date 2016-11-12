@@ -31,6 +31,7 @@ import java.awt.Dimension;
 public class SplitButton extends JFrame {
 
 	//Feito por: LeroxDev
+	//Exemplo: http://prntscr.com/d6isdq
 	
 	private static final long serialVersionUID = 290385328270090396L;
 	private JPanel contentPane;
@@ -47,10 +48,6 @@ public class SplitButton extends JFrame {
 			}
 		});
 	}
-
-	/**
-	 * Create the frame.
-	 */
 
 	private int arrowSize = 10;
 	private Image image;
