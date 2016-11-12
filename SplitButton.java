@@ -111,7 +111,7 @@ public class SplitButton extends JFrame {
 		popupMenu.setRequestFocusEnabled(false);
 		SplitButton.setBorder(new LineBorder(UIManager.getColor("Button.background"), 2));
 		popupMenu.setBackground(new Color(51, 51, 51));
-		addPopup(SplitButton, popupMenu);
+		splitPopup(SplitButton, popupMenu);
 		
 		JMenuItem Item1 = new JMenuItem("Index 1");
 		Item1.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 12));
@@ -144,7 +144,6 @@ public class SplitButton extends JFrame {
 			g.setColor(color);
 			g.fillPolygon(new int[]{0, 0, arrowSize / 2}, new int[]{0, arrowSize, arrowSize / 2}, 3);
 			g.dispose();
-			//rotate it to face downwards
 			g.setColor(color);
 			img = rotate(img, 90);
 			BufferedImage dimg = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_ARGB);
@@ -165,7 +164,7 @@ public class SplitButton extends JFrame {
 			return image;
 	}
 
-	private static void addPopup(Component component, final JPopupMenu popup) {
+	private static void splitPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 					showMenu(e);
