@@ -30,15 +30,10 @@ import java.awt.Dimension;
 
 public class SplitButton extends JFrame {
 
-	/**
-	 * 
-	 */
+	//Feito por: LeroxDev
+	
 	private static final long serialVersionUID = 290385328270090396L;
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -75,16 +70,12 @@ public class SplitButton extends JFrame {
 		SplitButton.setOpaque(false);
 		SplitButton.setBackground(new Color(204, 204, 204));
 		SplitButton.addMouseListener(new MouseListener() {
-
-			@Override
 			public void mouseReleased(MouseEvent e) {
 				SplitButton.setOpaque(false);
 				SplitButton.setForeground(UIManager.getColor("Button.background"));
 				SplitButton.setIcon(new ImageIcon(arrow(UIManager.getColor("Button.background"))));
 
 			}
-
-			@Override
 			public void mousePressed(MouseEvent e) {
 				SplitButton.setOpaque(true);
 				SplitButton.setBackground(Color.white);
@@ -92,21 +83,15 @@ public class SplitButton extends JFrame {
 				SplitButton.setIcon(new ImageIcon(arrow(Color.BLACK)));
 
 			}
-
-			@Override
 			public void mouseExited(MouseEvent e) {
 				SplitButton.setBackground(UIManager.getColor("Button.background")); 
 				SplitButton.setOpaque(false);
 
 			}
-
-			@Override
 			public void mouseEntered(MouseEvent e) {
 				SplitButton.setBackground(UIManager.getColor("Button.darkShadow"));
 				SplitButton.setOpaque(true);
 			}
-
-			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
@@ -192,8 +177,6 @@ public class SplitButton extends JFrame {
 					showMenu(e);
 			}
 			private void showMenu(MouseEvent e) {
-				
-				//- 40*2-1
 				popup.show(component, component.getWidth() - 40*2-1, component.getHeight() + 2);
 			}
 		});
